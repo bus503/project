@@ -1,6 +1,6 @@
-select user(), database();
 create database htw;
 use htw;
+select user(), database();
 
 create table project(
 	pno int not null auto_increment,
