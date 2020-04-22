@@ -3,6 +3,7 @@
 
 <%@ include file="../include/header.jsp"%>
   <!--   인클루드는 서버에서 땡기는 친구다 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
 	select{
 	margin-left: 18px;
@@ -12,6 +13,17 @@
 		width:262px;
 	}
 </style>
+<script>
+$(function(){
+	$("form").submit(function() {
+		var pname = $("input[name='pname']").val();
+		if(pname == ""){
+			alert("프로젝트의 이름을 입력해주세요.");
+			return false;
+		}
+	})
+})
+</script>
 <div class="content">
 	<div class="row">
 		<div class="col-sm-12">

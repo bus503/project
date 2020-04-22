@@ -3,29 +3,32 @@
 <mapper namespace="mappers.MainMapper">
 
 	<insert id="insert">
-		insert into project (pname, pcontent, startdate, enddate, progress) values
+		insert into project (pname, pcontent, startdate, enddate, progress)
+		values
 		(#{pname},#{pcontent},#{startdate},#{enddate},#{progress})
-	<!-- 	insert into project values
-		(null, #{pname},#{pcontent},#{startdate},#{enddate},#{progress}) -->
+		<!-- insert into project values (null, #{pname},#{pcontent},#{startdate},#{enddate},#{progress}) -->
 	</insert>
-	
+
 	<select id="selectByNo" resultType="MainVO">
 		select * from project
-		where pno=#{pno}
+		where
+		pno=#{pno}
 	</select>
-	
+
 	<select id="list" resultType="MainVO">
 		select * from project
 	</select>
-	
 	<update id="update" parameterType="MainVO">
-		update project set pname=#{pname}, pcontent=#{pcontent}, 
+		update project set
+		pname=#{pname}, pcontent=#{pcontent},
 		startdate=#{startdate},enddate=#{enddate}, progress=#{progress}
-		where pno=#{pno}
+		where
+		pno=#{pno}
 	</update>
-	
+
 	<delete id="delete" parameterType="mainVO">
 		delete from project
-		where pno=#{pno}
+		where
+		pno=#{pno}
 	</delete>
 </mapper>
