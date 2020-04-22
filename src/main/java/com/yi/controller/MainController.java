@@ -23,6 +23,7 @@ public class MainController {
 	@RequestMapping(value="/main/insert",method = RequestMethod.GET)
 	public String insertGet(MainVO vo) throws Exception{
 		return "/main/insert";
+		//깃용 재커밋
 	}
 	
 	@RequestMapping(value="/main/insert",method = RequestMethod.POST)
