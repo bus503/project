@@ -34,17 +34,17 @@ public class MainDAOTest {
 		dao.insert(vo);
 	}
 	
-	//@Test
+	@Test
 	public void testSelectByNo() throws Exception{
 		dao.selectByNo(1);
 	}
 	
-	//@Test
+	@Test
 	public void testList() throws Exception{
 		dao.list();
 	}
 
-	//@Test
+	@Test
 	public void testUpdate() throws Exception{
 		MainVO vo = new MainVO();
 		vo.setPno(1);
@@ -56,7 +56,7 @@ public class MainDAOTest {
 		dao.update(vo);
 	}
 	
-	//@Test
+	@Test
 	public void testDelete() throws Exception{
 		dao.delete(2);
 	}
